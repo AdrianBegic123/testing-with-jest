@@ -1,0 +1,22 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "hej hej hej hej hej hej jag är bäst och gör förändringar i readme",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianBegic123/testing-with-jest.git"
+  },
+  "author": "Adrian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdrianBegic123/testing-with-jest/issues"
+  },
+  "homepage": "https://github.com/AdrianBegic123/testing-with-jest#readme"
+}
