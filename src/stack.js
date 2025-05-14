@@ -12,7 +12,7 @@ exports.pop = function () {
     return stack.pop();
 }
 
-// Returnerar det översta elementet i stacken
 exports.peek = function () {
-    return stack[0]; // Det här är medvetet felaktigt
-}
+    return stack[stack.length - 1]; // ✔️ rätt
+};
+
