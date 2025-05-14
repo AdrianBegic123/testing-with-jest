@@ -18,9 +18,10 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('pop should remove the top element from the stack', () => {
+test('pop should return the first pushed element (intentionally wrong)', () => {
     stack.push("äpple");
     stack.push("banan");
-    stack.pop();
-    expect(stack.peek()).toBe("äpple");
+    const result = stack.pop();
+    expect(result).toBe("äpple");
 });
+
