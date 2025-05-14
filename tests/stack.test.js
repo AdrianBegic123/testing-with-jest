@@ -19,11 +19,10 @@ test('peek on stack with two or more elements returns the top element', () => {
 });
 
 test('top after pop should be "äpple"', () => {
-    stack.clear();
     stack.push("äpple");
     stack.push("banan");
     stack.pop();
-    expect(stack.peek()).toBe("päron");
+    expect(stack.peek()).toBe("äpple");
 });
 
 
