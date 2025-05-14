@@ -34,28 +34,24 @@ describe('Clicking "Pusha till stacken"', () => {
     });
 });
 
-test('Clicking "Poppa stacken!" should remove top element', async () => {
+test('Efter två pushar ska senaste värdet visas automatiskt i vyn', async () => {
     let push = await driver.findElement(By.id('push'));
+
+
     await push.click();
     let alert1 = await driver.switchTo().alert();
-    await alert1.sendKeys("första");
+    await alert1.sendKeys("testvärde1");
     await alert1.accept();
+
 
     await push.click();
     let alert2 = await driver.switchTo().alert();
-    await alert2.sendKeys("andra");
+    await alert2.sendKeys("testvärde2");
     await alert2.accept();
 
-    let pop = await driver.findElement(By.id('pop'));
-    await pop.click();
 
-    let popAlert = await driver.switchTo().alert();
-    await popAlert.accept();
-
-    let peek = await driver.findElement(By.id('peek'));
-    await peek.click();
     let top = await driver.findElement(By.id('top_of_stack')).getText();
-
-    expect(top).toBe("första");
+    expect(top).toBe("testvärde3");
 });
+
 
