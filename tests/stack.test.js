@@ -22,5 +22,5 @@ test('pop should remove the top element from the stack', () => {
     stack.push("äpple");
     stack.push("banan");
     stack.pop();
-    expect(stack.peek()).toBe("apelsin");
+    expect(stack.peek()).toBe("äpple");
 });
