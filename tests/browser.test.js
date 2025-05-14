@@ -51,7 +51,7 @@ test('Efter två pushar ska senaste värdet visas automatiskt i vyn', async () =
 
 
     let top = await driver.findElement(By.id('top_of_stack')).getText();
-    expect(top).toBe("testvärde3");
+    expect(top).toBe("testvärde2");
 });
 
 
