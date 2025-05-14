@@ -33,3 +33,28 @@ describe('Clicking "Pusha till stacken"', () => {
         await alert.accept();
     });
 });
+
+test('Clicking "Poppa stacken!" should remove top element', async () => {
+    // Lägg till två element
+    let push = await driver.findElement(By.id('push'));
+    await push.click();
+    let alert1 = await driver.switchTo().alert();
+    await alert1.sendKeys("första");
+    await alert1.accept();
+
+    await push.click();
+    let alert2 = await driver.switchTo().alert();
+    await alert2.sendKeys("andra");
+    await alert2.accept();
+
+    // Poppa stacken
+    let pop = await driver.findElement(By.id('pop'));
+    await pop.click();
+
+    // Kolla vad som nu finns överst
+    let peek = await driver.findElement(By.id('peek'));
+    await peek.click();
+    let top = await driver.findElement(By.id('top_of_stack')).getText();
+
+    expect(top).toBe("tredje");
+});
