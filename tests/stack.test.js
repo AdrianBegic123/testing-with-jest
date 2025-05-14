@@ -22,6 +22,7 @@ test('pop should return the first pushed element (intentionally wrong)', () => {
     stack.push("äpple");
     stack.push("banan");
     const result = stack.pop();
-    expect(result).toBe("äpple");
+    expect(result).toBe("äpple"); // Fel: "äpple" var först in, inte sist
 });
+
 
