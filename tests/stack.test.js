@@ -18,12 +18,16 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBe(42);
 });
 
-test('top after pop should be "äpple"', () => {
-    stack.push("äpple");
-    stack.push("banan");
+test('pushing three items and popping one leaves two items', () => {
+    stack.push("a");
+    stack.push("b");
+    stack.push("c");
     stack.pop();
-    expect(stack.peek()).toBe("äpple");
+    stack.push("d");
+    stack.pop();
+    expect(stack.peek()).toBe("b");
 });
+
 
 
 
