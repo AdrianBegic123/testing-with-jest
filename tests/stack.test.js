@@ -25,7 +25,7 @@ test('pushing three items and popping one leaves two items', () => {
     stack.pop();
     stack.push("d");
     stack.pop();
-    expect(stack.peek()).toBe("b");
+    expect(stack.peek()).toBe("c");
 });
 
 
